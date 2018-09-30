@@ -36,7 +36,7 @@ for (var i = 0; i < stack.length; i++) {
         classes += ' interest';
     }
     var logo = '<span class="logo'+classes+'"><img src="assets/img/logos/'+object.svg+'.svg" alt="'+object.tech+'"></span>';
-    document.getElementById("logoSection").innerHTML += logo;
+    document.getElementById("logoDiv").innerHTML += logo;
 }
 
 // function for dynamic sorting

@@ -99,33 +99,41 @@ section#cvSection {
 
 }
 
+section#introSection {
+  display: block;
+}
+
 section#imprintSection {
   padding-top: 1em;
   padding-bottom: 2em;
 }
 
-section.logos {
-  margin-top: 2em;
+section#logoSection {
+  clear: both;
+  padding-top: 2em;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  span {
-    width: 32px;
-    height: 32px;
-    padding: 8px;
-    position: relative;
-    img {
-      opacity: .5;
-      max-width: 32px;
-      max-height: 32px;
+  div#logoDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    span {
+      width: 32px;
+      height: 32px;
+      padding: 8px;
       position: relative;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    img:hover {
+      img {
+        opacity: .5;
+        max-width: 32px;
+        max-height: 32px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      img:hover {
 
+      }
     }
   }
 }
@@ -189,4 +197,14 @@ img.xs-flag {
 img.flag {
   max-height: 3em;
   max-width: 3em;
+}
+
+#githubAvatar {
+  width: 101px;
+  margin-right: 1em;
+  float: left;
+}
+
+section {
+  width: 100%;
 }
