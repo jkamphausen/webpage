@@ -99,27 +99,36 @@ section#cvSection ul.topics ul.stations ul {
   padding-bottom: .5em;
 }
 
+section#introSection {
+  display: block;
+}
+
 section#imprintSection {
   padding-top: 1em;
   padding-bottom: 2em;
 }
 
-section.logos {
-  margin-top: 2em;
+section#logoSection {
+  clear: both;
+  padding-top: 2em;
+  width: 100%;
+}
+
+section#logoSection div#logoDiv {
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-section.logos span {
+section#logoSection div#logoDiv span {
   width: 32px;
   height: 32px;
   padding: 8px;
   position: relative;
 }
 
-section.logos span img {
+section#logoSection div#logoDiv span img {
   opacity: .5;
   max-width: 32px;
   max-height: 32px;
@@ -181,4 +190,14 @@ img.xs-flag {
 img.flag {
   max-height: 3em;
   max-width: 3em;
+}
+
+#githubAvatar {
+  width: 101px;
+  margin-right: 1em;
+  float: left;
+}
+
+section {
+  width: 100%;
 }
