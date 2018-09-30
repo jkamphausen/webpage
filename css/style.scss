@@ -151,19 +151,31 @@ section.logos {
   }
 }
 
-span.italic {
+.quiteshort {
+  font-size: 0.7em;
+}
+
+.halfling {
+  font-size: 0.5em;
+}
+
+.dwarf {
+  font-size: 0.3em;
+}
+
+.italic {
   font-style: italic;
 }
 
-span.highlight {
+.highlight {
   color: $active;
 }
 
-span.light {
+.light {
   font-weight: 300;
 }
 
-span.uppercase {
+.uppercase {
   text-transform: uppercase;
 }
 
