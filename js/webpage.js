@@ -24,7 +24,7 @@ stack.sort(compareValues('state', 'desc'));
 for (var i = 0; i < stack.length; i++) {
     var object = stack[i];
     var classes = '';
-    console.log(object.tech + ',' + object.svg);
+    //console.log(object.tech + ',' + object.svg);
     switch (object.state) {
       case 2:
         classes += ' toolkit';
