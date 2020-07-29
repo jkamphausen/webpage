@@ -1,209 +1,157 @@
 import Head from 'next/head'
+import Link from 'next/link'
+
+import styled from 'styled-components'
+
+import { Container } from '../components/container/container'
+import { BaseSection, GridSection, HeaderSection } from '../components/sections/sections'
+import { Footer, FooterElement } from '../components/footer/footer'
+import { Navigator, NavigatorVerticalText } from '../components/navigator/navigator'
+import { Signet } from '../components/signet/signet'
+import { Header } from '../components/header/header'
+
+import { PopoverContainer, Popover, PopoverToggle } from '../components/popover/popover'
+
+import { FaGithub, FaXing, FaXingSquare, FaLinkedinIn, FaLinkedin, FaTelegramPlane, FaTelegram, FaEnvelope } from 'react-icons/fa';
 
 export default function Home() {
   return (
-    <div className="container">
+    <div className="wrapper">
       <Head>
-        <title>Create Next App</title>
+        <title>Julian Kamphausen</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <PopoverContainer>
+        <Popover className="off">
+          <div className="header"><h3>Menu</h3></div>
+          <div className="body">
+            <ul>
+              <li><Link href="/"><a>Intro</a></Link></li>
+              <li><Link href="/"><a>Projects</a></Link></li>
+              <li><Link href="/"><a>Contact</a></Link></li>
+              <li><Link href="/"><a>Imprint</a></Link></li>
+              <li><Link href="/"><a>DSGVO</a></Link></li>
+              <li><Link href="/"><a>✕</a></Link></li>
+            </ul>
+          </div>
+          <div className="footer"></div>
+        </Popover>
+      </PopoverContainer>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+      <Container>
 
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        <HeaderSection>
+          <div className="intro-image">
+            {/* <img src="/img/sample/IMG_0152.jpg" alt="" /> */}
+            <img src="/img/sample/j1.jpg" alt="" />
+          </div>
 
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <header>
+            <h1><span>Julian</span> Kamphausen</h1>
+            <PopoverToggle className="toggle">
+              <input type="checkbox" className="openSidebarMenu" id="openSidebarMenu" />
+              <label htmlFor="openSidebarMenu" className="sidebarIconToggle">
+                <div className="spinner diagonal part-1"></div>
+                <div className="spinner horizontal"></div>
+                <div className="spinner diagonal part-2"></div>
+              </label>
+            </PopoverToggle>
+          </header>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <div className="social-box">
+            <Link href="/">
+              <FaXingSquare />
+            </Link>
+            <Link href="/">
+              <FaLinkedin />
+            </Link>
+            <Link href="/">
+              <FaEnvelope />
+            </Link>
+            <Link href="/">
+              <FaTelegramPlane />
+            </Link>
+          </div>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
+          <div className="triangle-box">
+            <svg id="triangle" viewBox="0 0 100 100">
+              <polygon points="50 15, 100 100, 0 100" />
+            </svg>
+          </div>
+
+        </HeaderSection>
+
+        <BaseSection>
+          <div className="section-title"><h2>abc</h2></div>
+          <div className="section-text">
+            <p>Hi - Ich bin Julian. Lorem ipsum dolor sit amet, consectetur adipisici elit.</p>
+            <p>Labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+          </div>
+        </BaseSection>
+
+        <BaseSection>
+          <div className="section-title"><h2>About</h2></div>
+          <img className="section-image" src="/img/sample/A.jpg" alt="" />
+          <p className="section-text">Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </BaseSection>
+
+        <GridSection>
+          <div className="section-title"><h2>Projects</h2></div>
+          <div className="square-grid">
+            <div className="tile current-tile">
+              <div className="tile-content">
+                <img src="" alt="" />
+                <h3>current work</h3>
+              </div>
+            </div>
+            <div className="tile">
+              <div className="tile-content">
+                <img src="/img/sample/D.jpg" alt="a" />
+                <h3>Web App</h3>
+              </div>
+            </div>
+            <div className="tile">
+              <div className="tile-content">
+                <img src="/img/sample/E.jpg" alt="a" />
+                <h3>Print</h3>
+              </div>
+            </div>
+            <div className="tile">
+              <div className="tile-content">
+                <img src="/img/sample/A.jpg" alt="a" />
+                <h3>Webpage</h3>
+              </div>
+            </div>
+            <div className="tile">
+              <div className="tile-content">
+                <img src="/img/sample/B.jpg" alt="b" />
+                <h3>Webpage</h3>
+              </div>
+            </div>
+            <div className="tile">
+              <div className="tile-content">
+                <img src="/img/sample/C.jpg" alt="c" />
+                <h3>PR</h3>
+              </div>
+            </div>
+          </div>
+        </GridSection>
+
+        <BaseSection>
+          <div className="section-title"><h2>Contact</h2></div>
+          <div className="section-text">
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-          </a>
-        </div>
-      </main>
+          </div>
+        </BaseSection>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
+      </Container>
 
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
 
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
 
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
 
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
+    </div >
   )
 }
