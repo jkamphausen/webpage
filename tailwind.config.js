@@ -5,9 +5,9 @@ module.exports = {
       colors: {
         'accent-1': '#FAFAFA',
         'accent-2': '#EAEAEA',
-        'accent-7': '#333',
-        success: '#0070f3',
-        cyan: '#79FFE1',
+        'accent-7': '#0070f3',
+        'success': '#0070f3',
+        'cyan': '#79FFE1',
       },
       spacing: {
         28: '7rem',
