@@ -20,34 +20,15 @@ export default function About() {
                 </h1>
                 <div className="mb-8 prose leading-6 text-gray-600 dark:text-gray-400">
                     <p>
-                        Hey, I’m Lee. I'm a developer, writer, and the creator of&nbsp;
-                        <a
-                            href="https://masteringnextjs.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Mastering Next.js
-                        </a>
-                        &nbsp;and&nbsp;
-                        <a
-                            href="https://react2025.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            React 2025.
-                        </a>
-                        &nbsp;I work at ▲Vercel as a Solutions Architect.
+                        Hi, I'm Julian Kamphausen.
                     </p>
                     <p>
-                        I grew up in small-town Iowa and went to school at Iowa State,
-                        graduating with a degree in Computer Engineering. I spend my free
-                        time playing music, creating videos, and enjoying time with friends
-                        and family in Des Moines, IA.
+                        I am a web developer, dedicated to design and technology. I volunteer in the <Link href="https://alumniverein.eu"><a>Alumniverein der SchulBrücken</a></Link>, which I founded together with friends.
+                    </p>
+                    <p>
+                        I grew up in Mönchengladbach and completed my Bachelor's degree in Media Studies / Media Computer Science at the University of Cologne. I am currently studying at the TH Lübeck.
                     </p>
                 </div>
-                <h2 className="font-bold text-3xl tracking-tight mb-4 text-black dark:text-white">
-                    Lorem
-                </h2>
             </div>
         </Container>
     );

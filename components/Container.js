@@ -20,6 +20,9 @@ export default function Container({ children }) {
                     </Link>
                 </div>
                 <div>
+                    <Link href="/projects">
+                        <a className="p-1 sm:p-4 text-gray-900 dark:text-gray-100">Projects</a>
+                    </Link>
                     <Link href="/about">
                         <a className="p-1 sm:p-4 text-gray-900 dark:text-gray-100">About</a>
                     </Link>
