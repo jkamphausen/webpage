@@ -18,7 +18,7 @@ export default function About() {
                 <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
                     About Me
                 </h1>
-                <div className="mb-8 prose leading-6 text-gray-600 dark:text-gray-400">
+                <div className="mb-8 prose leading-6 text-gray-800 dark:text-gray-200">
                     <p>
                         Hi, I'm Julian Kamphausen.
                     </p>
@@ -26,7 +26,7 @@ export default function About() {
                         I am a web developer, dedicated to design and technology. I volunteer in the <Link href="https://alumniverein.eu"><a>Alumniverein der SchulBrücken</a></Link>, which I founded together with friends.
                     </p>
                     <p>
-                        I grew up in Mönchengladbach and completed my Bachelor's degree in Media Studies / Media Computer Science at the University of Cologne. I am currently studying at the TH Lübeck.
+                        I grew up in Mönchengladbach and completed my Bachelor's degree in Media Studies / Media Computer Science at the University of Cologne. I am currently studying for a master's degree in Media Computer Science at the TH Lübeck.
                     </p>
                 </div>
             </div>

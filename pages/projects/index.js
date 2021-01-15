@@ -10,13 +10,13 @@ const projects = [
         title: 'Shakespeare VR',
         description: 'A student project around transmedial theatre in VR. Implemented with Angular 2 and A-Frame.',
         href: '/projects/shakespeare-vr',
-        imageUrl: '/static/images/projects/shakespeare-vr/shakespeare-vr-mac2.png'
+        imageUrl: '/static/images/projects/misc/shakespeare-vr-project2.png'
     },
     {
         title: 'WoMS',
         description: 'Web development, research and design as part of my work at the Institute of Digital Humanities in Cologne and beyond.',
         href: '/projects/woms',
-        imageUrl: '/static/images/projects/woms/woms-mac.png'
+        imageUrl: '/static/images/projects/misc/woms-project.png'
     },
     {
         title: 'Buchscanner',
@@ -38,7 +38,7 @@ export default function Projects() {
                 }}
             />
             <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
-                <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-8 text-black dark:text-white">
+                <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-8 text-gray-800 dark:text-gray-200">
                     Projects
                 </h1>
                 <section className="mb-16 prose leading-6 text-gray-600 dark:text-gray-400">

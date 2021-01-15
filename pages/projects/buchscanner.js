@@ -68,14 +68,14 @@ export default function Buchscanner() {
                     }
                     {
                         projectData.extLink && (
-                            <ExternalLink href="{projectData.extLink}">
-                                <h5 className="mb-2 font-bold">→ Website</h5>
+                            <ExternalLink href={projectData.extLink}>
+                                <h5 className="mb-2 font-bold">→ Course</h5>
                             </ExternalLink>
                         )
                     }
                     {
                         projectData.repo && (
-                            <ExternalLink href="{projectData.repo}">
+                            <ExternalLink href={projectData.repo}>
                                 <h5 className="mb-2 font-bold">→ Repository</h5>
                             </ExternalLink>
                         )
