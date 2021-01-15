@@ -15,7 +15,7 @@ const projectData = {
     repo: 'https://github.com/StudyBucket/shakespeare-vr',
     time: 'Summer Term 2017 | University of Cologne',
     url: '/projects/buchscanner',
-    imageUrl: '/static/images/projects/shakespeare-vr/shakespeare.jpg'
+    imageUrl: '/static/images/projects/misc/shakespeare-vr-project.png'
 }
 
 
@@ -33,12 +33,12 @@ export default function Shakespeare() {
             <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
                 <div>
                     <div className="mb-4">
-                        <Link href="/projects" className="tracking-tight text-gray-600 dark:text-gray-400"><a>Projects →</a></Link> <span className="tracking-tight text-black dark:text-white">{projectData.title}</span>
+                        <Link href="/projects" className="tracking-tight text-gray-800 dark:text-gray-200"><a>Projects →</a></Link> <span className="tracking-tight text-black dark:text-white">{projectData.title}</span>
                     </div>
                     <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
                         {projectData.title}
                     </h1>
-                    <h2 className="mb-8 prose leading-6 text-gray-600 dark:text-gray-400">{projectData.tagline}</h2>
+                    <h2 className="mb-8 text-black dark:text-white">{projectData.tagline}</h2>
                     <Image
                         src={projectData.imageUrl}
                         alt={`J. Kamphausen | ${projectData.title}`}
@@ -51,36 +51,36 @@ export default function Shakespeare() {
                     {
                         projectData.time && (
                             <>
-                                <h5 className="mb-2 font-bold">Time</h5>
-                                <p className="mb-4 prose leading-6 text-gray-600 dark:text-gray-400 text-justify">{projectData.time}</p>
+                                <h5 className="tracking-tight mb-2 text-black dark:text-white">Time</h5>
+                                <p className="mb-4 prose text-justify leading-6 text-gray-800 dark:text-gray-200">{projectData.time}</p>
                             </>
                         )
                     }
                     {
                         projectData.roles && (
                             <>
-                                <h5 className="mb-2 font-bold">Roles</h5>
-                                <p className="mb-4 prose leading-6 text-gray-600 dark:text-gray-400 text-justify">{projectData.roles}</p>
+                                <h5 className="tracking-tight mb-2 text-black dark:text-white">Roles</h5>
+                                <p className="mb-4 prose text-justify leading-6 text-gray-800 dark:text-gray-200">{projectData.roles}</p>
                             </>
                         )
                     }
                     {
                         projectData.extLink && (
-                            <ExternalLink href="{projectData.extLink}">
-                                <h5 className="mb-2 font-bold">→ Course</h5>
+                            <ExternalLink href={projectData.extLink}>
+                                <h5 className="tracking-tight mb-2 text-black dark:text-white">→ Course</h5>
                             </ExternalLink>
                         )
                     }
                     {
                         projectData.repo && (
-                            <ExternalLink href="{projectData.repo}">
-                                <h5 className="mb-2 font-bold">→ Repository</h5>
+                            <ExternalLink href={projectData.repo}>
+                                <h5 className="tracking-tight mb-2 text-black dark:text-white">→ Repository</h5>
                             </ExternalLink>
                         )
                     }
                 </div>
 
-                <div className="mb-8 prose leading-6 text-gray-600 dark:text-gray-400 text-justify">
+                <div className="mb-8 prose text-justify leading-6 text-gray-800 dark:text-gray-200">
                     <div dangerouslySetInnerHTML={{ __html: projectData.text }} />
                 </div>
             </div>
