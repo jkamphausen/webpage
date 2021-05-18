@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>HKI BuchScanner :: Scanner</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/fancy.css">
+  </head>
+
+  <body>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="list.html" data-toggle="tooltip" data-placement="bottom" title="Zur Listenansicht wechseln">HKI BuchScanner :: Scanner</a>
+
+            <!-- <form class="navbar-form navbar-left" role="search">
+              <div class="checkbox navbar-btn">
+                  <label class="navbar-link" for="tooltips">
+                      <input type="checkbox" id="tooltips" checked>
+                      Tooltips <span class="glyphicon glyphicon-comment"></span>
+                  </label>
+              </div>
+              <div class="checkbox navbar-btn">
+                  <label class="navbar-link" for="popovers">
+                      <input type="checkbox" id="popovers">
+                      Popovers <span class="glyphicon glyphicon-modal-window"></span>
+                  </label>
+              </div>
+            </form> -->
+
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <form class="navbar-form navbar-right">
+              <div class="form-group">
+                <input type="text" placeholder="ISBN Code" id="isbn-search" class="form-control" value=""><!--3898643123-->
+              </div>
+              <button type="submit" class="btn btn-success" id="isbn-search-btn" data-toggle="tooltip" data-placement="bottom" title="Speichern &amp; nächste Ressource laden">
+                <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+              </button>
+              <button type="submit" class="btn" id="save-n-clear-btn" data-toggle="tooltip" data-placement="bottom" title="Formular speichern &amp; leeren">
+                <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
+                &amp;
+                <span class="glyphicon glyphicon-fire" aria-hidden="true"></span>
+              </button>
+              <button type="submit" class="btn btn-danger" id="clear-btn" data-toggle="tooltip" data-placement="bottom" title="Formular leeren">
+                <span class="glyphicon glyphicon-fire" aria-hidden="true"></span>
+              </button>
+            </form>
+          </div><!--/.navbar-collapse -->
+        </div>
+      </nav>
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div id="success-alert" class="alert alert-success" role="alert" hidden=""></div>
+        <div class="container">
+          <h1 id="preview-title">Buchtitel</h1>
+          <!-- <h2>Untertitel</h2> -->
+
+          <!-- Example row of columns -->
+          <div class="row">
+            <div class="col-md-4">
+              <h3>Autor</h3>
+              <p id="preview-author">Autor</p>
+
+              <h3>Herausgeber</h3>
+              <p id="preview-publisher">Herausgeber,<br> <span id="preview-pubdate">Datum</span></p>
+
+              <div class="pull-left">
+                <dl>
+                  <dt>ISBN-10</dt>
+                  <dd id="preview-isbn10">isbn10</dd>
+
+                  <dt>ISBN-13</dt>
+                  <dd id="preview-isbn13">isbn13</dd>
+                </dl>
+              </div>
+
+            </div>
+            <div class="col-md-8">
+            <hr>
+              <div class="media">
+                <div class="media-body">
+                  <h3 class="media-heading">Inhalt</h3>
+                  <p id="preview-content">Inhaltsangabe / Beschreibung</p>
+                </div>
+                <div class="media-right">
+                  <img id="preview-thumburl" src="https://www.google.de/images/nav_logo242.png" id="cover_front" class="media-object">
+                </div>
+              </div>
+
+           </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-6">
+            <form id="book-data"> <!-- !!! !!! !!! START FORM book-data !!! !!! !!! -->
+              <div class="input-group">
+                <span class="input-group-addon" id="basic-addon3">
+                  <label for="Barcode">Barcode</label>
+                </span>
+                <input type="text" class="form-control" id="book-barcode" name="book-barcode" aria-describedby="Barcode" placeholder="... will be set automatically" deactivated>
+              </div><br>
+
+              <div class="input-group">
+                <span class="input-group-addon" id="basic-addon3">
+                  <label for="Title">Title</label>
+                </span>
+                <input type="text" class="form-control" id="book-title" name="book-title" aria-describedby="Title" placeholder="Title">
+              </div><br>
+
+              <div class="input-group">
+                <span class="input-group-addon" id="basic-addon3">
+                  <label for="Author">Author</label>
+                </span>
+                <input type="text" class="form-control" id="book-author" name="book-author" aria-describedby="Author" placeholder="Author">
+              </div><br>
+
+              <div class="input-group">
+                <span class="input-group-addon" id="basic-addon3">
+                  <label for="Subject">Subject</label>
+                </span>
+                <input type="text" class="form-control" id="book-subject" name="book-subject" aria-describedby="Subject" placeholder="Subject">
+              </div><br>
+
+              <div class="input-group">
+                <span class="input-group-addon" id="basic-addon3">
+                  <label for="Publisher">Publisher</label>
+                </span>
+                <input type="text" class="form-control" id="book-publisher" name="book-publisher" aria-describedby="Publisher" placeholder="Publisher">
+              </div><br>
+
+              <div class="input-group">
+                <span class="input-group-addon" id="basic-addon3">
+                  <label for="Publisher Location">Publisher Location</label>
+                </span>
+                <input type="text" class="form-control" id="book-publocation" name="book-publocation" aria-describedby="Publisher Location" placeholder="Publisher Location">
+              </div><br>
+
+              <div class="input-group">
+                <span class="input-group-addon" id="basic-addon3">
+                  <label for="Publish Date">Publish Date</label>
+                </span>
+                <input type="text" class="form-control" id="book-pubdate" name="book-pubdate" aria-describedby="Publish Date" placeholder="Publish Date">
+              </div><br>
+
+              <div class="input-group">
+                <span class="input-group-addon" id="basic-addon3">
+                  <label for="Edition">Edition</label>
+                </span>
+                <input type="text" class="form-control" id="book-edition" name="book-edition" aria-describedby="Edition" placeholder="Edition">
+              </div><br>
+
+              <div class="input-group">
+                <span class="input-group-addon" id="basic-addon3">
+                  <label for="ISBN">ISBN</label>
+                </span>
+                <input type="text" class="form-control" id="book-isbn" name="book-isbn" aria-describedby="ISBN" placeholder="ISBN">
+              </div><br>
+              
+            </div>
+            <div class="col-md-6">
+
+              <div class="input-group">
+                <span class="input-group-addon" id="basic-addon3">
+                  <label for="Category">Category</label>
+                </span>
+                <input type="text" class="form-control" id="book-category" name="book-category" aria-describedby="Category" placeholder="Category">
+              </div><br>
+
+              <div class="input-group">
+                <span class="input-group-addon" id="basic-addon3">
+                  <label for="Thumbnail-URL">Thumbnail-URL</label>
+                </span>
+                <input type="text" class="form-control" id="book-thumburl" name="book-thumburl" aria-describedby="Thumbnail-URL" placeholder="Thumbnail-URL">
+              </div><br>
+
+              <div class="form-group">
+                <label for="Description">Description:</label>
+                <textarea class="form-control" rows="5" id="book-description" name="book-description" placeholder="Description"></textarea>
+              </div><br>
+            </div>
+          </div>
+        </form> <!-- !!! !!! !!! END FORM book-data !!! !!! !!! -->
+        <hr>
+
+        <footer>
+          <p>&copy; 2016 HKI, Universität zu Köln</p>
+        </footer>
+      </div> <!-- /container -->
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Latest ultrafancy Script -->
+    <script src="js/ultrafancy.js"></script> 
+    <!-- Latest fancy Script / Opt-ins -->
+    <script src="js/fancy.js"></script>  
+  </body>
+</html>
+
+<!-- 
+
+    barcode, 
+    title, 
+    author, 
+    subject, 
+    description, 
+    category, 
+    media, 
+    publisher, 
+    publocation, 
+    pubdate, 
+    edition, 
+    isbn, 
+    type, 
+    thumburl, 
+    callnumber 
+
+    -->
+
+<!--
+ |  Created by Julian Kamphausen, 2016 Cologne
+ -->

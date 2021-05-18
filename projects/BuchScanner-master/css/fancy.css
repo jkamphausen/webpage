@@ -1,0 +1,41 @@
+body {
+	padding-top: 50px;
+}
+
+footer {
+	padding-top: 2.5em;
+}
+
+.btn + .tooltip > .tooltip-inner,
+.btn + .tooltip > .tooltip-arrow {
+	margin-top: .7em;
+}
+
+#save-n-clear-btn {
+	/* 
+		#5cb85c - success color
+		#f0ad4e - warning color
+		#d9534f - danger color
+	*/
+
+	background: #f0ad4e!important; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, #5cb85c 50%, #d9504f  50%)!important; /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, #5cb85c 50%, #d9504f  50%)!important; /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, #5cb85c 50%, #d9504f  50%)!important; /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, #5cb85c 50%, #d9504f  50%)!important; /* Standard syntax */
+
+	color: white;
+}
+
+.btn {
+	border: none;
+}
+
+#sql-well {
+	max-height: 256px;
+	overflow: scroll;
+}
+
+/*
+ *	Created by Julian Kamphausen, 2016 Cologne
+ */
