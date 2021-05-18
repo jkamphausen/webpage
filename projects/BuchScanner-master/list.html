@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>HKI BuchScanner :: Liste</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/fancy.css">
+  </head>
+
+  <body>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html" data-toggle="tooltip" data-placement="bottom" title="Zum Scanner wechseln">HKI BuchScanner :: Liste</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="export2sql.html"><span class="glyphicon glyphicon-comment"></span> SQL-Statement</a></li>
+            </ul>
+          </div><!--/.navbar-collapse -->
+        </div>
+      </nav>
+      <!-- Main jumbotron for a primary marketing message or call to action -->      
+      <!-- <div class="alert alert-danger" role="alert">...</div> -->
+      <div class="container">
+
+        <h1>Gescannte Bücher (<span id="book-count"></span>)</h1>
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="table-responsive">
+              <form id="book-list">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th><span class="glyphicon glyphicon-trash"></span></th>
+                      <th><span class="glyphicon glyphicon-pencil"></span></th>
+                      <th>barcode</th> 
+                      <th>title</th> 
+                      <th>author</th> 
+                      <th>isbn</th> 
+                      <th>subject</th> 
+                      <th>description</th> 
+                      <th>category</th> 
+                      <th>media</th> 
+                      <th>publisher</th> 
+                      <th>publocation</th> 
+                      <th>pubdate</th> 
+                      <th>edition</th> 
+                      <th>type</th> 
+                      <th>thumburl</th> 
+                      <th>callnumber</th>
+                    </tr>
+                  </thead>
+
+                  <tbody id="list-of-books">
+                       
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th></th>
+                      <th><input type="checkbox" id="select-all-box"></th>
+                      <th colspan="14">
+                        <button type="button" class="btn btn-danger btn-xs delete-all-btn">
+                          <span class="glyphicon glyphicon-trash"></span> Markierte löschen
+                        </button>
+                      </th>
+                    </tr>  
+                  </tfoot>
+                </table>
+              </form>
+            </div>            
+            <br><br><br>
+          </div>
+        </div>
+
+        <footer>
+          <p>&copy; 2016 HKI, Universität zu Köln</p>
+        </footer>
+      </div> <!-- /container -->
+     
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Latest ultrafancy Script -->
+    <script src="js/evenmorefancy.js"></script>   
+    <!-- Latest fancy Script / Opt-ins -->
+    <script src="js/fancy.js"></script> 
+  </body>
+</html>
+
+<!-- 
+
+    barcode, 
+    title, 
+    author, 
+    subject, 
+    description, 
+    category, 
+    media, 
+    publisher, 
+    publocation, 
+    pubdate, 
+    edition, 
+    isbn, 
+    type, 
+    thumburl, 
+    callnumber 
+
+    -->
+
+<!--
+ |  Created by Julian Kamphausen, 2016 Cologne
+ -->
